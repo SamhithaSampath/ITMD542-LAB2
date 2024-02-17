@@ -1,10 +1,12 @@
 [
   {
     "id": "2",
-    "firstName": "Jane",
+    "firstName": "Jan",
     "lastName": "Doe",
     "emailAddress": "jane.doe@example.com",
-    "notes": "Another sample contact"
+    "notes": "Another sample contact",
+    "createdAt": "2024-02-17T00:34:15.522Z",
+    "updatedAt": "2024-02-17T00:34:15.523Z"
   },
   {
     "id": "generated-id-1708051549870",
@@ -14,15 +16,6 @@
     "notes": "",
     "createdAt": "2024-02-16T02:47:07.373Z",
     "updatedAt": "2024-02-16T02:47:07.373Z"
-  },
-  {
-    "id": "generated-id-1708051713042",
-    "firstName": "Nam",
-    "lastName": "Sam",
-    "emailAddress": "namsam@gmail.com",
-    "notes": "",
-    "createdAt": "2024-02-16T02:48:33.042Z",
-    "updatedAt": "2024-02-16T02:48:33.042Z"
   },
   {
     "id": "generated-id-1708051767029",
