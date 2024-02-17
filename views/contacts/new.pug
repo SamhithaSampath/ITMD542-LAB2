@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  h1 Create New Contact
+  if errorMessage
+    p.error-message= errorMessage
+  form.card.p-3(action='/contacts' method='post')
+    label(for='firstName') First Name:
+    input.form-control(type='text' name='firstName' required)
+    label(for='lastName') Last Name:
+    input.form-control(type='text' name='lastName' required)
+    label(for='emailAddress') Email Address:
+    input.form-control(type='text' name='emailAddress')
+    label(for='notes') Notes:
+    textarea.form-control(name='notes')
+    button.btn.btn-success(type='submit') Create Contact
+  a.btn.btn-secondary(href='/contacts') Cancel
+
+
+
+

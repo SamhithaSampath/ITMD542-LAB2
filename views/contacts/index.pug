@@ -1,0 +1,33 @@
+extends ../layout
+
+block content
+  h1 All Contacts
+
+  // Add conditional check for contacts
+  if contacts && contacts.length
+    each contact in contacts
+      div
+        p
+          strong ID: #{contact.id}
+        p
+          strong First Name: #{contact.firstName}
+        p
+          strong Last Name: #{contact.lastName}
+        p
+          strong Email Address: #{contact.emailAddress}
+        p
+          strong Notes: #{contact.notes}
+        p
+          strong Created At: #{contact.createdAt}
+        p
+          strong Updated At: #{contact.updatedAt}
+        a.btn.btn-primary(href=`/contacts/${contact.id}`) View Contact
+        a.btn.btn-warning(href=`/contacts/${contact.id}/edit`) Edit Contact
+        form(style='display:inline-block', method='post', action=`/contacts/${contact.id}/delete`)
+          button.btn.btn-danger(type='submit') Delete Contact
+  else
+    p No contacts available
+
+  a.btn.btn-success(href='/contacts/new') Create New Contact
+
+
