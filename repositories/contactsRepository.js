@@ -1,12 +1,9 @@
 // contactsRepository.js
-// contactsRepository.js
-
 
 const fs = require('fs');
 const path = require('path');
 
 const dataFilePath = path.join(__dirname, '../data/contacts.json');
-console.log('Data File Path:', dataFilePath);
 
 function readData() {
   const data = fs.readFileSync(dataFilePath, 'utf-8');
@@ -31,11 +28,13 @@ function createContact(newContact) {
   const contacts = readData();
   newContact.id = generateId();
   newContact.createdAt = new Date().toISOString();
-  newContact.updatedAt = new Date().toISOString();
+  newContact.updatedAt = new Date().toISOString(); // Set updatedAt to the current timestamp
   contacts.push(newContact);
   writeData(contacts);
   return newContact;
 }
+
+
 
 function updateContact(updatedContact) {
   const contacts = readData();
@@ -70,3 +69,5 @@ module.exports = {
   updateContact,
   deleteContact,
 };
+
+

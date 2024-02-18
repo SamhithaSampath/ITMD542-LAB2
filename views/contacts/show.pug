@@ -9,6 +9,9 @@ block content
     div.card-body
       h5.card-title Contact Information
       p.card-text
+        strong ID:
+        | #{contact.id}
+      p.card-text
         strong First Name:
         | #{contact.firstName}
       p.card-text
@@ -23,11 +26,21 @@ block content
 
     div.card-footer
       p.card-text
-        strong Date Created/Modified:
-        | #{contact.createdAt instanceof Date ? contact.createdAt.toISOString() : 'N/A'}
-        | / 
-        | #{contact.updatedAt instanceof Date ? contact.updatedAt.toISOString() : 'N/A'}
+        strong Date Created:
+          | #{contact.createdAt ? new Date(contact.createdAt).toLocaleString() : 'N/A'}
+      p.card-text
+        strong Date Updated:
+          | #{contact.updatedAt ? new Date(contact.updatedAt).toLocaleString() : 'N/A'}
+
+  // Add buttons for editing and deleting the contact
+  a.btn.btn-warning(href=`/contacts/${contact.id}/edit`) Edit Contact
+  form(style='display:inline-block', method='post', action=`/contacts/${contact.id}/delete`)
+    button.btn.btn-danger(type='submit') Delete Contact
 
   a.btn.btn-primary(href='/contacts') Back to All Contacts
+
+
+
+
 
 
