@@ -25,8 +25,14 @@ function validateContactData(data) {
   // Check for valid email address using a simple regex pattern
   const isInvalidEmail = emailAddress && !/^\S+@\S+\.\S+$/.test(emailAddress);
 
+  // Build error message for each validation issue
+  let errorMessage = 'Please correct the following issues:';
+  if (!isNonNumericFirstName) errorMessage += ' First name should contain only letters.';
+  if (!isNonNumericLastName) errorMessage += ' Last name should contain only letters.';
+  if (isInvalidEmail) errorMessage += ' Please provide a valid email address.';
+
   // Return true if all validations pass
-  return isNonNumericFirstName && isNonNumericLastName && !isInvalidEmail;
+  return { isValid: isNonNumericFirstName && isNonNumericLastName && !isInvalidEmail, errorMessage };
 }
 
 
@@ -68,16 +74,18 @@ router.get('/new', (req, res) => {
 });
 
 
+
 // Route to handle creating a new contact
 router.post('/', (req, res) => {
   try {
     const { firstName, lastName, emailAddress, notes } = req.body;
 
     // Validate the form data
-    if (!validateContactData(req.body)) {
-      // Display error message and render the form again
+    const validationResult = validateContactData(req.body);
+    if (!validationResult.isValid) {
+      // Display detailed error message and render the form again
       const contacts = contactsRepository.getAllContacts();
-      return res.render('contacts/new', { errorMessage: 'Please fill in all required fields.', contacts, layout: 'layout' });
+      return res.render('contacts/new', { errorMessage: validationResult.errorMessage, contacts, layout: 'layout' });
     }
 
     // Sanitize user input
@@ -100,6 +108,7 @@ router.post('/', (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
+
 
 
 // Route to view a single contact
@@ -152,10 +161,11 @@ router.post('/:id', (req, res) => {
     const { firstName, lastName, emailAddress, notes } = req.body;
 
     // Validate the form data
-    if (!validateContactData(req.body)) {
+    const validation = validateContactData(req.body);
+    if (!validation.isValid) {
       // Display error message and render the form again
       const contact = contactsRepository.getContactById(id);
-      return res.render('contacts/edit', { errorMessage: 'Please fill in all required fields.', contact, layout: 'layout' });
+      return res.render('contacts/edit', { errorMessage: validation.errorMessage, contact, layout: 'layout' });
     }
 
     // Sanitize user input
@@ -237,7 +247,6 @@ router.get('/generated/:id', (req, res) => {
 });
 
 module.exports = router;
-
 
 
 

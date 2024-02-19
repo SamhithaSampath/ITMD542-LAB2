@@ -29,19 +29,19 @@
   {
     "id": "generated-id-1708249148380",
     "firstName": "Vinni",
-    "lastName": "Moee",
-    "emailAddress": "vinnimoee@gmail.com",
+    "lastName": "Nick",
+    "emailAddress": "vinninick@gmail.com",
     "notes": "",
     "createdAt": "2024-02-18T10:34:02.980Z",
-    "updatedAt": "2024-02-18T19:33:49.685Z"
+    "updatedAt": "2024-02-19T02:35:21.743Z"
   },
   {
-    "id": "generated-id-1708252629379",
+    "id": "generated-id-1708303481668",
     "firstName": "Hina",
-    "lastName": "James",
-    "emailAddress": "",
+    "lastName": "Joshula",
+    "emailAddress": "hinajoshula@gmai.com",
     "notes": "",
-    "createdAt": "2024-02-18T19:32:15.355Z",
-    "updatedAt": "2024-02-18T19:53:56.082Z"
+    "createdAt": "2024-02-19T00:44:41.668Z",
+    "updatedAt": "2024-02-19T02:32:51.893Z"
   }
 ]
