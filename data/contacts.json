@@ -1,7 +1,5 @@
 [
   {
-<<<<<<< HEAD
-=======
     "id": "2",
     "firstName": "Jane",
     "lastName": "Doe",
@@ -11,7 +9,6 @@
     "updatedAt": "2024-02-18T19:35:06.467Z"
   },
   {
->>>>>>> 7bce44ac909f7e660487f08d4ecffb801708b4db
     "id": "generated-id-1708051549870",
     "firstName": "Samhitha",
     "lastName": "Sampath",
@@ -30,7 +27,6 @@
     "updatedAt": "2024-02-16T04:18:14.877Z"
   },
   {
-<<<<<<< HEAD
     "id": "generated-id-1708993681550",
     "firstName": "Sujatha",
     "lastName": "Sampath",
@@ -47,7 +43,8 @@
     "notes": "",
     "createdAt": "2024-02-27T00:28:56.316Z",
     "updatedAt": "2024-02-27T00:28:56.316Z"
-=======
+  },
+  {
     "id": "generated-id-1708249148380",
     "firstName": "Vinni",
     "lastName": "Nick",
@@ -64,6 +61,5 @@
     "notes": "",
     "createdAt": "2024-02-19T00:44:41.668Z",
     "updatedAt": "2024-02-19T02:32:51.893Z"
->>>>>>> 7bce44ac909f7e660487f08d4ecffb801708b4db
   }
 ]
