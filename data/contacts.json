@@ -2,11 +2,11 @@
   {
     "id": "2",
     "firstName": "Jane",
-    "lastName": "Doe",
+    "lastName": "Doee",
     "emailAddress": "jane.doe@example.com",
     "notes": "Another sample contact",
     "createdAt": "2024-02-18T08:47:49.487Z",
-    "updatedAt": "2024-02-18T19:35:06.467Z"
+    "updatedAt": "2024-02-27T14:00:40.390Z"
   },
   {
     "id": "generated-id-1708051549870",
