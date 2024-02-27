@@ -17,6 +17,7 @@ function readData() {
 }
 
 
+
 function writeData(data) {
   fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2), 'utf-8');
 }
