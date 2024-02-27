@@ -1,14 +1,5 @@
 [
   {
-    "id": "2",
-    "firstName": "Jan",
-    "lastName": "Doe",
-    "emailAddress": "jane.doe@example.com",
-    "notes": "Another sample contact",
-    "createdAt": "2024-02-17T00:34:15.522Z",
-    "updatedAt": "2024-02-17T00:34:15.523Z"
-  },
-  {
     "id": "generated-id-1708051549870",
     "firstName": "Samhitha",
     "lastName": "Sampath",
@@ -25,5 +16,23 @@
     "notes": "",
     "createdAt": "2024-02-16T04:18:14.876Z",
     "updatedAt": "2024-02-16T04:18:14.877Z"
+  },
+  {
+    "id": "generated-id-1708993681550",
+    "firstName": "Sujatha",
+    "lastName": "Sampath",
+    "emailAddress": "sujathasampath@gmail.com",
+    "notes": "",
+    "createdAt": "2024-02-27T00:28:01.550Z",
+    "updatedAt": "2024-02-27T00:28:01.550Z"
+  },
+  {
+    "id": "generated-id-1708993736316",
+    "firstName": "Hina",
+    "lastName": "James",
+    "emailAddress": "hinajames@gmail.com",
+    "notes": "",
+    "createdAt": "2024-02-27T00:28:56.316Z",
+    "updatedAt": "2024-02-27T00:28:56.316Z"
   }
 ]
