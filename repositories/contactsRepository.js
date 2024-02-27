@@ -6,9 +6,16 @@ const path = require('path');
 const dataFilePath = path.join(__dirname, '../data/contacts.json');
 
 function readData() {
-  const data = fs.readFileSync(dataFilePath, 'utf-8');
-  return JSON.parse(data);
+  try {
+    const data = fs.readFileSync(dataFilePath, 'utf-8');
+    console.log('Data before parsing:', data); // Add this line
+    return JSON.parse(data);
+  } catch (error) {
+    console.error('Error reading data:', error.message);
+    return [];
+  }
 }
+
 
 function writeData(data) {
   fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2), 'utf-8');
